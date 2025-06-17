@@ -1,0 +1,2179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/xlx.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	<link rel="stylesheet" href="plugin/chalkboard/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 第〇章 前言
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 劳动法律体系简介
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="unordered_pics/Pasted image 20250325141647.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 为什么要了解劳动法？
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- 合法斗争的重要途径，提高无产阶级经济状况
+- 小知识分子改造自身，获得群众信任的重要途径
+- 了解劳资冲突对抗的形式、烈度，了解劳资调和的形式
+- 了解劳动过程、劳动力市场、产业后备军的运行逻辑
+- 了解现代国家法团主义的运行方式
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 第一章 劳动关系与劳动权益
+
+参考：《劳动法》《关于确立劳动关系有关事项的通知》《非法用工单位伤亡人员一次性赔偿办法》
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 第一节 劳动关系
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+dg-publish: true
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+劳动关系是用人单位与劳动者之间建立为了完成特定工作任务而订立的法律关系。
+
+在该**不平等关系**中，劳动者受到用人单位的管理，用人单位则为劳动者提供工作条件和薪酬。
+
+注意，并不是任意的“谁为谁干活，谁给谁发钱“就是劳动关系。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 构成劳动关系需要满足什么条件？ 
+
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+1. 用人单位和劳动者符合法律、法规规定的主体资格。具体来说，就是用人单位具有合法的用人资质，劳动者超过16周岁、未满退休年龄。
+2. 用人单位依法制定的各项劳动规章制度适用于劳动者，劳动者受用人单位的劳动管理，从事用人单位安排的有报酬的劳动；
+3. 劳动者提供的劳动是用人单位业务的组成部分。
+
+劳动法 劳动合同法 非法用工 关于确立劳动关系有关事项的通知
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 劳动关系有什么用？
+
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+我们采用的维护劳动权益的主要形式，即劳动监察、劳动仲裁，是建立在劳动关系成立的基础上的。进一步说，我们依据的主要法律，《劳动法》《劳动合同法》《劳动争议调解仲裁法》，所规定的大多都是劳动关系成立之下的情形，劳动者们会遇到的各种情况：社保的缴纳，工伤的认定，工资的发放，各种补贴和津贴，假期等等，只有在劳动关系成立之时才可能以法律手段维护——简而言之，本清单的大多数操作和知识都是针对劳动关系成立的劳动者的。当然，有一些不需要劳动关系成立的特殊情况，例如《保障农民工工资支付条例》第三条第四款之规定。但是，这种情况是很少的。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 劳动者享有什么权益？
+
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+依据《劳动法》第三条，劳动者享有以下权利：
+
+##### 第三条
+
+劳动者享有平等就业和选择职业的权利、取得劳动报酬的权利、休息休假的权利、获得劳动安全卫生保护的权利、接受职业技能培训的权利、享受社会保险和福利的权利、提请劳动争议处理的权利以及法律规定的其他劳动权利。
+
+劳动者应当完成劳动任务，提高职业技能，执行劳动安全卫生规程，遵守劳动纪律和职业道德。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 劳动关系和劳动合同有什么关系？
+
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+具有效力的劳动合同是证明劳动关系存在最有力的证据，劳动合同中规定的工作地点、工作内容、工资待遇、社会保险等等书面约定也是在发生劳动纠纷之后最重要的参考。——不过，没有签订劳动合同**并不意味着劳动关系不存在**。只要满足了上面提到的构成劳动关系的条件之后，即使未订立书面合同，劳动关系也是存在的。进一步说，即使签订的合同的名字不是“劳动合同“，只要里面规定了实质劳动合同的内容，其效力也与劳动合同一致。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 如果我签了“劳务合同”“承揽合同”之类的东西，是不是自动认定为劳动关系不成立？  
+**A：** 不是。如果合同里规定的是劳动合同应当规定的内容，那么其效力等同于劳动合同。
+
+#### 只有企业是符合法律规定的主体资格吗？  
+**A：** 不。
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+依据《劳动法》第二条：在中华人民共和国境内的企业、个体经济组织（以下统称用人单位）和与之形成劳动关系的劳动者，适用本法。国家机关、事业组织、社会团体和与之建立劳动合同关系的劳动者，依照本法执行。  
+也就是说，个体工商户、非盈利社会组织、事业单位等等貌似特殊的主体都是可以作为建立劳动关系的主体的。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 第二节 劳动合同
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="unordered_pics/1742878213353.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="unordered_pics/1742878235224.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="unordered_pics/1742878257621.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 常见的劳动合同中的非法内容
+
+| **非法内容**              | 例子                                                                     |
+| --------------------- | ---------------------------------------------------------------------- |
+| 侵犯婚姻权利                | 规定合同期内**职工不准恋爱、生育**                                                    |
+| 违反劳动保护制度              | 约定劳动者**自行负责工伤**、伤残医疗费用自理等                                              |
+| 违规收费                  | **强制收取**培训费、保证金等                                                       |
+| 侵犯健康权利                | **约定工作时间超过法律规定**，损害**正常休息休假**权利                                        |
+| 侵犯报酬权利                | **不支付加班工资**、**低于最低标准**的工资                                              |
+| 侵犯自主择业权利              | **巨额违约金**、培训费，**限制职工流动**                                               |
+| 权利义务显失公平              | **无偿或不对价的竞业禁止条件**等                                                     |
+| 不论当事人是否知晓，内容违反法律、行政法规 | 例如用人单位规定试用期超过六个月、支付劳动者工资低于最低工资标准、**不缴纳社会保险费**、**订立劳动合同时向劳动者收取定金、抵押金**等 |
+| 订立程序形式违法              | 双方当事人**未经协商**，或**未经批准**采取特殊工时制度                                        |
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+其他事项：
+- **不要签**空白的劳动合同。大多数劳动争议，公司都可以借助空白合同轻松规避。
+- 劳动合同应当是**一式两份**的，劳动者必须拥有一份。
+- 劳动合同中约定的工作内容，工作地点，工资之类实质内容不可以变更，除非**双方协商并一致同意**。变更内容要合法，遵循同工同酬原则。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- 劳动关系不因劳动合同期满而自动终止，用人单位有义务**做出一定表示**，例如提前**询问员工是否续签**。
+- 以下三种情况，**除非劳动者提出异议**，否则单位应与劳动者订立无固定期限劳动合同:  
+	1. 劳动者在该用人单位**连续工作满十年**;  
+	2. **连续订立二次固定期限劳动合同**后，再续订劳动合同;  
+	3. 用人单位**自用工之日起满一年不与劳动者订立书面劳动合同**的，视为用人单位与劳动者已订立无固定期限劳动合同。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 第二节 劳动关系的认定
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+####  必须要先认定劳动关系，然后才能借助法律途径维护自己的权益吗？   
+**A：** 更加准确的说法是，只有在劳动关系成立的同时才可以维护劳动权益。——和前者的差别在于，“劳动关系的认定”虽然是必须的，却不一定需要发生在先。  
+例如，认定工伤时，是规定把证明劳动关系的材料和工伤认定申请表一同上交的。还例如，不需要先打一次劳动仲裁来确定劳动关系，再打一次劳动仲裁来维护合法权益，而是可以在同一次劳动仲裁中同时完成这两件事情的。  
+若劳动关系不成立，那么工伤通常没办法认定，权益也难以维护。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 需要通过什么途径来认定劳动关系？    
+
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+劳动仲裁。例如，劳动者被某一用人单位欠了3个月的工资，并且没有签订劳动合同，现在他希望通过仲裁来讨薪，那么他在申请书上的仲裁请求应当是：请求确认申请人与被申请人在某某日到某某日存在劳动关系，然后才是请求被申请人向申请人支付某某日到某某日应发未发工资和未签订书面劳动关系的工资XXX元。   
+当然，也可以选择劳动监察部门，此时需要的证据相对不是那么正式、严谨、详尽。但是，我们仍然建议劳动者知晓认定劳动关系的具体方法，如此一来想必更有利于劳动者。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 认定劳动关系需要什么证据？如何组织我的证据？ 
+
+**A：** 
+
+
+既然我们把“确认存在劳动关系”写在了劳动仲裁申请书的“仲裁请求”一栏，那么我们就需要找到相应的证据。  
+最有力的证据是书面劳动合同。——不过，如果有书面合同的话，劳动者也不必做此请求。故而我们讨论的情况是未签订书面劳动合同，此时需要依据可以证明《关于确立劳动关系有关事项的通知》第一条规定情形的事实。（下一页续）
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+《关于确立劳动关系有关事项的通知》第二条有关内容：   
+##### 二、
+
+用人单位未与劳动者签订劳动合同，认定双方存在劳动关系时可参照下列凭证：  
+(一)工资支付凭证或记录(职工工资发放花名册)、缴纳各项社会保险费的记录；  
+(二)用人单位向劳动者发放的“工作证”、“服务证”等能够证明身份的证件；  
+(三)劳动者填写的用人单位招工招聘“登记表”、“报名表”等招用记录；  
+(四)考勤记录；  
+(五)其他劳动者的证言等。  
+其中，(一)、(三)、(四)项的有关凭证由用人单位负举证责任。
+
+
+
+（下一页续）
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+我们建议劳动者按照此通知第一条的规定寻找证据。张三是某个工地的建筑工人，他需要证明自己和此工地的承包单位存在劳动关系，现在我们来逐条比对：
+
+a) 需要证明：用人单位和劳动者符合法律、法规规定的主体资格。证据：张三本人的身份证，张三用手机拍下了施工告示牌上承包单位的名称，并在国家企业信用信息公示系统上搜索后发现其是具有合法资质的用工单位，并做了截图保存；（下一页续）
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+b) 需要证明：用人单位依法制定的各项劳动规章制度适用于劳动者，劳动者受用人单位的劳动管理，从事用人单位安排的有报酬的劳动。证据：张三穿着施工服，佩戴安全帽的施工视频；管理人员安排张三工作的录音；微信发放工资凭证以及相应的消息。
+
+c) 需要证明：劳动者提供的劳动是用人单位业务的组成部分。证据：张三的施工视频里包括周边地区环境的信息，可以看出张三在这一工地劳动。
+
+如此一来，把前文中所有提到的证据全部汇总起来，就足以有效证明张三和承包单位存在劳动关系。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 第三节 非法用工
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 由于用人单位的过错而导致劳动关系不能正常建立，而又符合劳动关系的其他特征，劳动者也是难以维护自身权益吗？ 
+
+**A：** 这种情况是非法用工。显然，在过错在用人单位的情况下损害劳动者的权益是有失公允的，因此国家特别规定了非法用工的情形：   
+《劳动法》
+##### 第九十三条
+
+用人单位强令劳动者违章冒险作业，发生重大伤亡事故，造成严重后果的，对责任人员依法追究刑事责任。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 怎样的情形属于非法用工？
+
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+非法用工主体包括以下四种情况，前三种是用人单位无主体资格，第四种是劳动者无主体资格。
+
+1. 无营业执照或者未经依法登记、备案的单位的用工
+2. 被依法吊销营业执照或者撤销登记、备案的单位的用工
+3. 营业期限届满仍继续经营的单位的用工
+4. 违法使用童工。（童工指不满16周岁）
+
+非法用工单位伤亡人员一次性赔偿办法#第二条
+禁止使用童工规定
+劳动保障监察条例
+劳动合同法实施条例
+劳动人事争议仲裁办案规则
+劳务派遣暂行规定
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 非法用工的劳动者如何维护自身权益？ 
+
+**A：** 基本形式和劳动关系存在的情况下并无不同。需要注意的是，“被申请人”要同时列出用人单位和出资人。可能存在仲裁委不受理的情况，此时拿着不予受理通知书去法院起诉就好。此外，由于《非法用工单位伤亡人员一次性赔偿办法》的存在，如果非法用工的劳动者需要进行工伤维权，就依据这一规定计算赔偿金。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 第四节 特殊人群
+
+
+#### 超龄劳动者能否建立劳动关系？   
+
+**A：** 一般来说，达到退休年龄正常退休、享受养老保险待遇的超龄劳动者是无法建立劳动关系的，但是具体认定是依据“达到退休年龄“还是”享受养老保险待遇“没有定论，我们建议劳动者在达到退休年龄前就维护自己的权益。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 学生能否建立劳动关系？   
+
+**A：** 
+对于满16周岁的在校学生来说，常见的情况有三种：     
+a) 勤工俭学：日常认知中只要学生劳动赚钱就是勤工俭学，但是实际上其是有明确的法律规定的。《高等学校勤工助学管理办法》  
+
+##### 第四条
+
+本办法所称勤工助学活动是指学生在学校的组织下利用课余时间，通过劳动取得合法报酬，用于改善学习和生活条件的实践活动。
+
+
+
+  在这种情形下，学生受到学校的直接管理，因此不认为其可以受到用人单位的管理，劳动关系不成立。——所以，切勿轻易承认自己是“勤工俭学“。（下一页续）
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+b) 假期工：同样不认为劳动关系成立，但是如果发生了工伤工亡，一般裁决会倾向学生。  
+c) 实习：这种情况下，显然用人单位有更多的管理权，但是判断是否属于劳动关系仍然需要考虑学校是否具有管理权。我们的建议是，如果学校有管理权，那么就签订正式的三方协议；如果学校没有管理权，就尽快和用人单位签订劳动合同。
+
+#### 不满十六周岁能否建立劳动关系？   
+**A：** 不能，属于童工。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 第二章 劳动权利的救济方式
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 第一节 劳动监察
+
+#### 劳动监察是怎样发挥作用的？  
+
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+劳动监察的主体是劳动监察部门，属于行政机构。可以理解为劳动纠纷领域的“警察”，有自主调查的权利，可以对于违反规定的用人单位责令整改。此外，与劳动仲裁的“仲裁前置”不同，不存在“监察前置”的原则
+
+劳动保障监察条例
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 哪种劳动纠纷找劳动监察部门比较高效？  
+**A：** 首先，是具有**明确证据**的劳动纠纷；其次，是涉及劳动者**群体**的劳动纠纷；然后，是有关于**劳动安全**的纠纷。——并且，劳动监察适于小钱快拿以及**不希望之后离职**的情形。
+
+#### 我在向劳动监察大队反应情况之后，我的事情得不到处理，怎么办？  
+**A：** 大概率意味着对方认为你的证据不充分或者情况不符合规定。这时，就只能考虑进行劳动仲裁了。当然，为了你的事情得到处理，就需要多催多问，不要觉得对方不理你就是对方处理不了，等到明确的拒绝信息之后再走仲裁也不迟。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 第二节 劳动仲裁
+
+
+#### 劳动仲裁和诉讼的区别是什么？  
+
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#劳动仲裁
+
+在劳动者实际操作的意义上，劳动仲裁是专门处理劳动纠纷的，仲裁委往往更加偏向劳动者；证据的要求也因为考虑到劳动者的状况，要求相对不是那么高；法律规定，劳动争议必须首先经过仲裁，对仲裁结果不满意才能进行诉讼。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 劳动仲裁的一般程序是什么？  
+
+**A：** 写劳动仲裁申请书，把这个状子交上去后仲裁委一般会发开庭和举证的通知，要求在期限内上交证据，并通知何时来参加庭审。随后，进行开庭和举证，在仲裁庭上对于双方的证据进行辩论。裁决之后会出一个裁决书。假如裁决书适应一裁终局，那么在裁决书规定的支付时限到达后可以申请强制执行。在后面的章节会进行详细说明。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 会不会仲裁委员会长期不处理案子？  
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#劳动仲裁 
+受理之后的最长处理时限是60天，如果仲裁委觉得你的诉求不合理，就会出具一个终止受理通知书。如果你希望走仲裁，就拿着通知书找法院就行。（当然也可能不给通知书，此时也没有办法）  
+但是，根据各地方情况不同，实际可能拖到一年。  
+此外，劳动仲裁有一年的时效限制，超出的事项不会被受理。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 万一不服从仲裁结果，能不能提起诉讼？
+
+**A：** 在劳动仲裁裁决书中有时会有“本裁决为终局裁决“的说明，这意味着用人单位无法就裁决结果提起诉讼（但是劳动者可以）。如果对裁决结果不满的话，劳动者可以在收到裁决书后15日内提起诉讼。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 什么情况是终局裁决？
+
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+《劳动争议调解仲裁法》
+##### 第四十七条
+
+下列劳动争议，除本法另有规定的外，仲裁裁决为终局裁决，裁决书自作出之日起发生法律效力：   
+（一）追索劳动报酬、工伤医疗费、经济补偿或者赔偿金，不超过当地月最低工资标准十二个月金额的争议；   
+（二）因执行国家的劳动标准在工作时间、休息休假、社会保险等方面发生的争议。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 第三节 诉讼
+
+#### 什么情形下我需要打诉讼？  
+**A：** 一般来说，有以下情况：
+
+（一） 劳动者仲裁失败，劳动者提起诉讼；  
+（二） 用人单位仲裁失败且不是终局裁决，用人单位提起诉讼；  
+（三） 仲裁委不受理，此时劳动者拿到《不予受理通知书》去法院提起诉讼。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 劳动争议可以直接进行诉讼吗？
+
+**A：** 不行，
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#劳动仲裁 
+劳动争议必须经过劳动仲裁才有被法院受理的可能。不过，仍然有一些特殊情况可以直接去法院：
+
+1. 公司欠工资，给我们打了欠条，仅就欠条所载明的债务，可以去法院起诉。  
+2. 已经过了退休年龄，就工资等劳务报酬可以法院起诉。  
+3. 仲裁委已经出具“不予受理通知书”或逾期未受理，持此通知书可以在法院立案。  
+4. 部分地区的高温补贴等补偿仲裁不受理，需要单独去法院。  
+5. 超过了仲裁时限，不得不进行民事诉讼。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 第三章 劳动仲裁具体内容
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="unordered_pics/1742878440159.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="unordered_pics/1742878461175.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="unordered_pics/1742878507129.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="unordered_pics/1742878532486.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="unordered_pics/申请书-11.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="unordered_pics/申请书-12.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 证据与证据清单
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 劳动仲裁/诉讼中举证会用到的证据种类有哪些？  
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#劳动仲裁 
+
+- **书证**，即书信文件，合同书，遗嘱票据等等，证明力很强。比如劳动合同文本是证明劳动关系存在的最有力证据，所以我们建议大家签劳动合同，这样可以直接证明存在劳动关系。  
+- **物证**，比如对方拿出一个有你名字的合同，你就拿出另一张有你签字的合同证明他合同上面的签名就不是你的字迹。  
+- **视听资料**。由于劳动者一般保存的证据以视听资料（视频，录音）居多，可以把视听资料保存在U盘和光盘里作为证据。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 偷录的这个视听资料是否可以作为证据呢？  
+**A：** 可以，但是关键的问题是要让法庭和仲裁庭去相信这个证据。
+
+#### 视听资料的取证有什么需要注意的？  
+**A：** 核心是
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#劳动仲裁 
+
+应当明确**四个因素：时间，地点，人物，事件**。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 如果我在户外工作场所上，怎样录制视听资料比较可靠？  
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+比如一个可靠的操作是，首先你开始录制，然后打开随便什么设备搜索北京**时间**，录下来；然后录下来周围的建筑物，或者用地图软件确定一下当前**地点**。然后把镜头对准**自己**，然后录一下身份证。然后利用一定的话术在询问对方时迫使对方承认自己的身份，比如问“你以什么样的一个身份来跟我谈这个东西”，最后把完整的交涉过程都录进去。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 如果我在办公室里，怎样录制视听资料比较可靠？  
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+比如一个可靠的操作是，首先把公司前台或者岗位上的工牌录进去，证明你在公司这个位置，然后如果你的企业有工作软件或者企业管理系统，就打开里面的企业信息，然后再是自己的个人信息，以及当前时间，随后就是对于事件的录制了，和上面差不多。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 那么如果我要把聊天记录作为证据呢，如何操作？
+
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**开始录屏**，打开聊天软件里你需要取证的记录，首先**点击自己的信息**，确认自己是谁；然后**点击聊天对象**，查询聊天对象的认证信息（确认对方是谁），然后缓慢滑动聊天内容。如果可以确认**聊天时间**的话，也一并录进去。需要注意的是，**绝对不能只录制一个窗口**，需要在打开聊天软件之前就开始录制。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 我可以请来证人，这有效力吗？
+
+**A：** 有的，建议证人出庭作证，如此效力更高。无法出庭作证的证明力相对较低。但是我们不建议使用证人证言，其效力显然低于书证物证。
+
+#### 还有什么是有效力的证据？
+
+**A：** 内容有用的，由鉴定机构或者有权机关作出的鉴定意见或结论。比如认定工伤时要有人社部门出具的工伤认定书或者劳动能力等级鉴定书等文件。还包括警方的出警记录——在事件发生后第一时间报警，出警结束后可以向警察索要这部分的出警记录，上面会包括出警事由以及具体情况。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 那么，在劳动仲裁或者诉讼中的举证有什么原则？
+
+**A：** 第一是**谁主张谁举证**，也就是主张一个事实的人应当对证明该事实负有责任。
+
+如果不能证明的，则应当承担不利责任。第二是**举证责任倒置**，对于法律规定应当由用人单位进行举证而不能举证的，应当承担不利责任；还有用人单位举证更轻松的，应当由用人单位进行举证而不能举证的，也应当承担不利责任。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 那么适用举证责任倒置的一般有哪些情况呢？
+
+**A：** 一，关于**职工名册规定内容**的证明责任由用人单位承担。  
+二，**劳动者无法提供的证据，由用人单位掌握的**，可以要求用人单位提供。  
+三，劳动者主张加班费应当证明**加班事实**的存在，但是这一证**据由用人单位掌握**，则应当由用人单位提供。  
+四，用人单位做出的**开除，除名，辞退，解除劳动合同，减少劳动报酬，计算劳动者工作年限**等决定而发生的劳动争议，用人单位负举证责任。——关于这一点，需要注意用人单位是应当证明其有合法理由，例如劳动者不能胜任工作或者违反公司规定。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+| 证据序号 | 证据名称          | 证明内容                                                                                                                                                       | 页码   |
+| ---- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| 1    | 微信聊天截图复印件     | 1. 证明被申请人于2024年1月1日至2024年12月31日期间每日正常为申请人安排工作内容。<br>2. 证明申请人请假需要被申请人审批通过，足见申请人受到被申请人处劳动纪律与内部规章制度约束，充分存在人身依附关系。                                             | 1~5  |
+| 2    | 钉钉考勤打卡记录截屏复印件 | 1. 证明申请人于2024年1月1日至2024年12月31日期间每日正常于早8点打卡上班，下午5点打卡下班，事实是全日制工作。足见申请人受到被申请人处劳动纪律与内部规章制度约束，充分存在人身依附关系。<br>2. 证明被申请人对申请人采取考勤记录的事实，因此申请人主张被申请人应当提供其掌握的申请人打卡记录。 | 6~10 |
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+| 3    | 微信转账截图复印件     | 证明被申请人每月15日向申请人微信转账人民币5000元。长期转续，双方存在申请人依靠自身劳动换取固定时间薪水的物质交换关系。                                                                                             | 11~15   |
+| ---- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| 4    | 被申请人钉钉系统录屏复印件 | 证明证据2来源及真实性。                                                                                                                                               | 光盘1，视频1 |
+
+提交人：  XXX   
+20XX年X月X日
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 第四章 工时与工资制度
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 第一节 工时制度
+
+<img src="unordered_pics/1742892346080.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+《**关于职工全年月平均工作时间和工资折算问题的通知》：**
+
+a) 工作日的计算
+
+年工作日：365天-104天（休息日）-11天（法定节假日）＝**250天**  
+季工作日：250天÷4季＝62.5天/季  
+月工作日：250天÷12月＝20.83天/月
+
+工作小时数的计算：以月、季、年的工作日乘以每日的8小时。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+b) 日工资、小时工资的折算
+
+按照《劳动法》第五十一条的规定，法定节假日用人单位应当依法支付工资，即**折算日工资、小时工资时不剔除国家规定的11天法定节假日**。据此，日工资、小时工资的折算为：
+
+日工资：月工资收入÷月计薪天数  
+小时工资：月工资收入÷（月计薪天数×8小时）。  
+**月计薪天数＝（365天-104天）÷12月＝21.75天**
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### **标准工时制度**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**每日工作时间**：不超过 **8小时**  
+**每周工作时间**：不超过 **40小时**（通常为 **5天8小时**）
+
+每周至少休息**1天**（通常是周末双休或单休）  
+法定节假日按国家规定执行（如春节、国庆等）
+
+每日加班不超过 **3小时**，每月加班不超过 **36小时**。加班工资：
+- **工作日加班**：支付 **1.5倍**工资
+- **休息日加班**（无法安排补休）：支付 **2倍**工资
+- **法定节假日加班**：支付 **3倍**工资
+
+劳动法#第四章_工作时间和休息休假
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### **综合工时制**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+综合工时制是针对因工作性质特殊，需连续作业或受季节及自然条件限制的企业的部分职工，采用的以周、月、季、年等为周期综合计算工作时间的一种工时制度，但**其平均日工作时间和平均周工作时间仍与法定标准工作时间基本相同**。计算标准参考本节第一条。
+
+
+- 交通、铁路、邮电、水运、航空、渔业等行业中因工作性质特殊，需连续作业的职工；
+- 地质及资源勘探、建筑、制盐、制糖、旅游等受季节和自然条件限制的行业的部分职工；
+- 其他适合实行综合计算工时工作制的职工。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### **不定时工作制**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+不定时工作制是针对因生产特点、工作特殊需要或职责范围的关系，无法按标准工作时间衡量或需要机动作业的职工所采取的工时制度。
+
+企业对符合下列条件之一的职工，可以实行不定时工作制。
+- 企业中的高级管理人员、外勤人员、推销人员、部分值班人员和其他因工作无法按标准工作时间衡量的职工；
+- 企业中的长途运输人员、出租汽车司机和铁路、港口、仓库的部分装卸人员以及因工作性质特殊，需机动作业的职工；
+- 其他因生产特点、工作特殊需要或职责范围的关系，适合实行不定时工作制的职工。
+
+劳动法#第四章_工作时间和休息休假
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**《关于职工工作时间有关问题的复函》**：对于实行不定时工作制的劳动者，企业应当根据标准工时制度合理确定劳动者的劳动定额或其他考核标准，以便安排劳动者休息。其工资由企业按照本单位的工资制度和工资分配办法，根据劳动者的实际工作时间和完成劳动定额情况计发。**对于符合带薪年休假条件的劳动者，企业可安排其享受带薪年休假。**
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 第二节 假期
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 一、 **法定节假日**
+
+全体公民放假的节日：
+1. 元旦，放假1天（1月1日）；
+2. 春节，放假4天（农历除夕、正月初一至初三）；
+3. 清明节，放假1天（农历清明当日）；
+4. 劳动节，放假2天（5月1日、2日）；
+5. 端午节，放假1天（农历端午当日）；
+6. 中秋节，放假1天（农历中秋当日）；
+7. 国庆节，放假3天（10月1日至3日）。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+部分公民放假的节日及纪念日：
+1. 妇女节（3月8日），妇女放假半天；
+2. 青年节（5月4日），14周岁以上的青年放假半天；
+3. 儿童节（6月1日），不满14周岁的少年儿童放假1天；
+4. 中国人民解放军建军纪念日（8月1日），现役军人放假半天。
+
+全体公民放假的假日，如果适逢周六、周日，应当在工作日补假。部分公民放假的假日，如果适逢周六、周日，则不补假。
+
+全体公民放假的假日，可合理安排统一放假调休，结合落实带薪年休假等制度，实际形成较长假期。除个别特殊情形外，法定节假日假期前后连续工作一般不超过6天。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 二、 **年休假**
+
+#### 如何确定我有多少年假？    
+**A：** 依据《职工带薪年休假条例》
+##### 第三条
+
+职工累计工作已满1年不满10年的，年休假5天；已满10年不满20年的，年休假10天；已满20年的，年休假15天。
+
+国家法定休假日、休息日不计入年休假的假期。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 如何理解这里的“连续工作满一年”？如果我发生了招工和退工，还算是连续吗？   
+**A：** 要看招工和退工的日期是否连续。不过需要注意的是，不是指未经登记的招工退工，而是指用人单位为劳动者在**劳动行政部门登记的招工与退工**。也就是在职介所或者就业促进中心办的劳动者转入（招工）和劳动者转出（退工）连续时，就仍然算作连续工作。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 如果招工退工不连续，比如中间隔了一天半个月的，那么算连续工作吗？   
+**A：** 如果**社保没有停缴**的话，仲裁或者法院可以**自由裁量**；如果社保发生了停缴，那么就得重新算起。
+
+#### 如果我连续工作未满一年，那么年假要如何计算？   
+**A：** 在确认劳动者可以享受年假的情况之下，年假是按照自然年度计算的。例如，某人在六月一日入职，那么这一年度工作了213天，除以一年365得到0.58作为系数，然后例如此人总工龄不满10年，年休假为五天，就用0.58乘以5得到2.9。那么，年休假天数就是两天。（注意：**向下取整**）还有一种情况是离职情况下的计算。假设劳动者于23年12月1日入职，24年2月3日离职，假定劳动者应当享有年假待遇，那么年假待遇应当包括两个部分，即2023年度的年休假和2024年度的年休假，**这两者是断开分别计算的**。假设年休假为5天，按照规则算得23年为0.4天，24年是0.45天，都不满一天，所以很遗憾他没有年假享受。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 年假是带薪休假吗？  
+**A：** 是。依据《职工带薪年休假条例》第二条：职工在年休假期间享受与正常工作期间相同的工资收入。
+
+#### 什么情况下我没有年假？  
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+职工有下列情形之一的，不享受当年的年休假：  
+- 不满足连续工作满一年的标准。
+- 职工依法享受寒暑假，其休假天数多于年休假天数的；  
+- 职工请事假累计20天以上且单位按照规定不扣工资的；  
+- 累计工作满1年不满10年的职工，请病假累计2个月以上的； 
+- 累计工作满10年不满20年的职工，请病假累计3个月以上的；  
+- 累计工作满20年以上的职工，请病假累计4个月以上的。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 三、 **病假与医疗期**
+
+#### a) **病假**
+
+#### 用人单位能否拒绝病假？  
+**A：** 只要病假单为真，并且劳动者将病假单、诊断书以及其他在就诊当日获得的医疗单据正常提交给公司（如有公司OA即办公系统或办公用软件，就正常进入系统填报），无论用人单位是否批准，劳动者就已经履行了病假报备的有关手续。劳动者在病假期间所需要注意的就是完成病假报备，至于用人单位是否批准并不重要。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 用人单位能否要求开具病假单的医院级别？  
+**A：** 例如一些用人单位的规章制度要求劳动者必须出具三级甲等综合医院的病假单，这种要求并不合理，难道一个感冒需要去三甲医院看吗？但是很多劳动者不知道如何反驳，这里的核心关键词叫“分级诊疗制度”（这里可以放一个国家卫健委关于推动建立分级诊疗制度的改革意见），也就是小病小医院，大病大医院。因此劳动者可以在发函以及仲裁时主张用人单位的“病假审批制度”中有关医院级别的规定违反我国分级诊疗制度的改革方向，明显会加重大医院以及劳动者的负担。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### b) **医疗期**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+事实上，“医疗期”是一个法律概念，其表示企业职工因患病或非因公负伤停止工作治病休息不得解除劳动合同的时限。而“病假”是一个经营概念，指员工因病休假。——因此，在你因病休假且在医疗期之内时，你得到的病假工资是法律规定的“医疗期工资“。  
+医疗期的工资：首先参考劳动合同中的约定，再看医疗期是否大于6个月，如果小于或等于6个月，比较**当地最低工资标准的80％和正常工作时月工资的60％**，按其中较高的来主张。如果医疗期大于6个月，比较**当地最低工资标准的80％和正常工作时月工资的40％**，按其中最高的主张。
+
+企业职工患病或非因工负伤医疗期规定
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+关于医疗期时长的计算：
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+| 累计工作年限 | 本单位工作年限 | 医疗期  |
+| ------ | ------- | ---- |
+| 十年以内   | 5年以下    | 3个月  |
+|        | 5年以上    | 6个月  |
+| 十年以上   | 5年以下    | 6个月  |
+|        | 5-10年   | 9个月  |
+|        | 10-15年  | 12个月 |
+|        | 15-20年  | 18个月 |
+|        | 20年以上   | 24个月 |
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 四、 **婚假、丧假、探亲假**
+
+略
+
+#### 五、 **生育期间假期**
+
+见生育保险部分介绍
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 第三节 工资
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 一、 **工资总额**
+
+《关于工资总额组成的规定》
+##### 第四条
+
+工资总额由下列6个部分组成：
+
+(一)计时工资；  
+(二)计件工资；  
+(三)奖金；  
+(四)津贴和补贴；  
+(五)加班加点工资；  
+(六)特殊情况下支付的工资。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**计时工资**是指
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**按计时工资标准**（包括地区生活费补贴）和工作时间支付给个人的劳动报酬。包括：对已做工作按计时工资标准支付的工资；实行结构工资制的单位支付给职工的基础工资和职务（岗位）工资；新参加工作职工的见习工资（学徒的生活费）；运动员体育津贴。
+
+关于工资总额组成的规定#第五条 工资支付暂行规定 劳动法#第五章_工资 劳动合同法
+
+**计件工资**是指
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+对已做工作按计件单价支付的劳动报酬。包括：实行超额累进计件、直接无限计件、限额计件、超定额计件等工资制，按劳动部门或主管部门批准的定额和计件单价支付给个人的工资；按工作任务包干方法支付给个人的工资；按营业额提成或利润提成办法支付给个人的工资。
+
+工资支付暂行规定 关于工资总额组成的规定#第六条 劳动法#第五章_工资 劳动合同法
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**奖金**是指支付给职工的超额劳动报酬和增收节支的劳动报酬。（《关于工资总额组成的规定#第七条》）
+
+**津贴和补贴**是指为了补偿职工特殊或额外的劳动消耗和因其他特殊原因支付给职工的津贴，以及为了保证职工工资水平不受物价影响支付给职工的物价补贴。其包括补偿职工特殊或额外劳动消耗的津贴，保健性津贴，技术性津贴，年功性津贴及其他津贴，以及为保证职工工资水平不受物价上涨或变动影响而支付的各种补贴。（《关于工资总额组成的规定#第八条》）
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**加班加点工资**是指按规定支付的加班工资和加点工资。（《关于工资总额组成的规定#第九条》）
+
+**特殊情况下支付的工资**。包括：根据国家法律、法规和政策规定，因病、工伤、产假、计划生育假、婚丧假、事假、探亲假、定期休假、停工学习、执行国家或社会义务等原因按计时工资标准或计时工资标准的一定比例支付的工资。（《关于工资总额组成的规定#第十条》）
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+同时注意到，有一些收入**并不计入工资总额**。它们是：
+
+1. 国家奖项；
+2. 有关**劳动保险和职工福利方面的各项费用**；
+3. 有关离休、退休、退职人员待遇的各项支出；
+4. **劳动保护的各项支出**；
+5. 稿费、讲课费及其他专门工作报酬；
+6. **出差伙食补助费、误餐补助、调动工作的旅费和安家费**；
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+7. 对自带工具、牲畜来企业工作职工所支付的工具、牲畜等的补偿费用；
+8. 实行租赁经营单位的承租人的风险性补偿收入；
+9. 对购买本企业股票和债券的职工所支付的股息（包括股金分红）和利息；
+10. 劳动合同制职工解除劳动合同时由企业支付的**医疗补助费、生活补助费**等；
+11. 因录用临时工而在工资以外向提供劳动力单位支付的手续费或管理费；
+12. 支付给家庭工人的加工费和按加工订货办法支付给承包单位的发包费用；
+13. 支付给参加企业劳动的在校学生的补贴；
+14. 计划生育独生子女补贴。
+（《关于工资总额组成的规定#第三章_工资总额不包括的项目》）
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 二、 **加班费**
+
+a) 标准工时制下的加班费
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+标准工时制度
+1. 平时（超过8小时）加班费计算方法：  
+月工资标准 ÷ 21.75 ÷ 8小时 × 加班时数 × 150%
+
+2. 双休日加班费计算方法：  
+月工资标准 ÷ 21.75 ÷ 8小时 × 加班时数 × 200%
+
+3. 法定节假日和加班费计算方法：  
+月工资标准÷21.75÷8小时×加班时数 ×（100% + 300%）（额外三倍）
+
+4. 应休未休年假工资计算方法：  
+月工资标准 ÷ 21.75 ÷ 8小时 ×（8小时+加班时数）× 300%
+
+劳动法#第四章_工作时间和休息休假
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+b) 非标准工时制下的加班费
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+在综合计算工时周期内，如果劳动者的总实际工作时间超过总法定标准工作时间，则超过的部分应视为延时加班，并按照规定支付加班费。
+
+PS：加班费的主张是**极为困难**的，所以一定要记得保留证据，比如每天加班的考勤，以及自己做的记录。
+
+PS：《工资支付暂行规定》第13条：实行**计件工资**的劳动者，在完成计件定额任务后，由用人单位安排延长工作时间的，应根据上述规定的原则，分别按照不低于其本人法定工作时间计件单价的150％、200％、300％支付其工资。
+
+劳动法#第四章_工作时间和休息休假
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 三、 **最低工资标准**
+
+**《最低工资规定》：**
+
+**第五条**：最低工资标准一般采取月最低工资标准和小时最低工资标准的形式。月最低工资标准适用于全日制就业劳动者，小时最低工资标准适用于非全日制就业劳动者。  
+**第七条**：省、自治区、直辖市范围内的不同行政区域可以有不同的最低工资标准。  
+**第十一条**：用人单位应在最低工资标准发布后10日内将该标准向本单位全体劳动者公示。  
+**第十二条**：在劳动者提供正常劳动的情况下，用人单位应支付给劳动者的工资在**剔除下列各项以后，不得低于当地最低工资标准**：（下一页续）
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+（一） 延长工作时间工资；  
+（二） 中班、夜班、高温、低温、井下、有毒有害等特殊工作环境、条件下的津贴；  
+（三） 法律、法规和国家规定的劳动者福利待遇等。
+
+实行**计件工资或提成工资**等工资形式的用人单位，在科学合理的劳动定额基础上，其支付劳动者的工资**不得低于相应的最低工资标准**。
+
+劳动者由于本人原因造成在法定工作时间内或依法签订的劳动合同约定的工作时间内未提供正常劳动的，不适用于本条规定。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 四、 **特殊情况工资**
+
+**未签书面劳动合同的双倍工资**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+用人单位自用工之日起超过一个月不满一年未与劳动者订立书面劳动合同的，用人单位应当支付双倍工资。从用工之日起满一个月后的第二天开始计算双倍工资，最多可以要求 11 个月的双倍工资赔偿。
+
+#### **试用期工资**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+试用期工资不得低于本单位**相同岗位最低档工资的80%** 或者不得低于 **劳动合同约定工资的80%**，并不得低于用人单位所在地的**最低工资**。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### **停工停产期间工资**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**停工停产期间仍然发放工资。**《工资支付暂行规定#第十二条》规定，“非因劳动者原因造成单位停工、停产在一个工资支付周期内的，用人单位应按劳动合同规定的标准支付劳动者工资。超过一个工资支付周期的，若劳动者提供了正常劳动，则支付给劳动者的劳动报酬不得低于当地的最低工资标准；若劳动者没有提供正常劳动，应按国家有关规定办理。“这里的”国家有关规定“一般是发放生活费，根据各地规定而定。
+
+ 工资支付周期从停工停产之日起开始计算，一个月为一个工资支付周期。例如，某司职工月底发放工资，在月中旬停工，那么是以停工之日起始的后一个自然月作为一个周期。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### **提成，绩效，年终奖，补贴**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- **提成**属于计件工资，劳资双方发生争议的，人民法院应先审查提成约定的效力。劳动者未满足提成条件的不支付提成款项。    
+- **绩效**在劳动合同里明确规定、且公司的绩效管理制度公开透明执行、员工签字确认的情况下是可以被公司扣除的；但是扣除之后的实际工资不得低于当地最低工资。   
+- **年终奖**属于奖金，关于离职需不需要发年终奖存在争议。但依据《劳动法》第五十条：不得克扣或者无故拖欠劳动者工资。某些地方认为应当发放年终奖。我们的建议是，如果是非劳动者过错辞退+在年底左右解除劳动关系+完成相应任务，则应支付全额奖金。如果是非劳动者过错辞退+非在年底解除劳动关系，劳动者可以要求支付对应比例的年终奖。（下页续）
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**补贴**是属于工资还是福利的判断较为模糊。判断标准在于：
+
+1. 是否在劳动合同或企业规章制度中对该补贴的性质有明确规定
+2. 发放时间和标准是否相对固定
+3. 企业是否代扣代缴个人所得税
+4. 该补贴是否专款专用。劳动者不能自由支配的补贴一般不是工资；而直接以现金形式发放的补贴可以考虑计入工资。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 五、 **实务中的常见疑问**
+
+#### 年终奖是工资的一部分吗？  
+**A：** 是。《关于工资总额组成的规定》第四条：工资总额由下列六个部分组成：（三）奖金。
+
+#### 非标准工时可以随意实行吗？
+
+**A：** 不行，需要企业上报，经过审批才有效。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 公司截留了一部分我的应得工资作为年终奖，这样子合法吗？  
+**A：** 不合法。依照《工资支付暂行规定》第七条：工资必须在用人单位与劳动者约定的日期支付。如遇节假日或休息日，则应提前在最近的工作日支付。工资至少每月支付一次，实行周、日、小时工资制的可按周、日、小时支付工资。
+
+#### 公司有关于截留工资作为年终奖的有关规定，此时还合法吗？  
+**A：** 你签的劳动合同里没有提过的话，还是不合法的。**劳动合同约定>公司自主权**。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 规章制度或劳动合同中约定离职不发放年终奖，合法吗？  
+**A：** 各地争议比较大。某些地区可能认为这种约定无效，也有些地区（比如浙江）认为有效。
+
+#### 公司扣除绩效工资合法吗？  
+**A：** 首要的关键在于劳动合同中是否约定绩效工资。如果约定了标准，那么是合法的；如果没有，就不合法。此外，如果公司是按照有关绩效考核的规定来扣除绩效工资的，那么这一制度应当由员工知情且签字同意。——还有一点，扣除之后的工资不能低于最低工资标准。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 公司可不可以扣除提成？  
+**A：** 依照《关于工资总额组成的规定》第六条，计件工资是指对已做工作按计件单价支付的劳动报酬。包括：（三）按营业额提成或利润提成办法支付给个人的工资。所以提成属于计件工资，又进一步属于劳动合同约定的工资总额中的一部分。因此，公司应当**按照劳动合同**中关于提成的约定来扣除提成，否则不合法。
+
+PS：在法院裁决过程中，对于绩效、提成以及补贴首先考虑的是**劳动合同**中所约定的；其次是**公司相关规定和制度是否合法**，包括**是否告知劳动者**，相关规定颁布是否符合法律程序等。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 公司扣工资在什么情况下是合法的？  
+**A：** 《工资支付暂行规定》
+
+##### 第十五条
+
+用人单位不得克扣劳动者工资。有下列情况之一的，用人单位可以代扣劳动者工资：
+
+（一）用人单位代扣代缴的个人所得税；  
+（二）用人单位代扣代缴的应由劳动者个人负担的各项社会保险费用；  
+（三）法院判决、裁定中要求代扣的抚养费、赡养费；  
+（四）法律、法规规定可以从劳动者工资中扣除的其他费用。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+由此可见，扣工资的条件是很有限的，公司往往会以绩效考核的方式压低整体的员工工资。或者，会按照《工资支付暂行规定》第十六条进行扣除：  
+##### 第十六条
+
+因劳动者本人原因给用人单位造成经济损失的，用人单位可按照劳动合同的约定要求其赔偿经济损失。经济损失的赔偿，可从劳动者本人的工资中扣除。但每月扣除的部分不得超过劳动者当月工资的20％。若扣除后的剩余工资部分低于当地月最低工资标准，则按最低工资标准支付。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 公司扣工资有最大限度吗？  
+**A：** 《工资支付暂行规定》第十六条：每月扣除的部分不得**超过劳动者当月工资的20%。** 扣除后的剩余部分低于当地月最低工资标准，则按最低工资标准支付。
+
+#### 工资发放可以用实物或者证券代替支付吗？  
+**A：** 不行。《工资支付暂行规定》第五条：工资应当以法定货币支付。不得以实物及有价证券替代货币支付。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 公司在发放工资前破产了，我还能正常得到工资吗？  
+**A：** 可以的。破产清偿的清偿顺序中支付劳动者的拖欠工资是比较靠前的。根据《企业破产法》第一百一十三条，职工工资属于第一清偿顺序。
+
+#### 我对于工资发放有意见，应该向谁反映？  
+**A：** 劳动监察大队，或者你也可以选择劳动仲裁。
+
+#### 我要主张公司支付加班费，有什么值得注意的？  
+**A：** 加班费的证明是**极其困难**的。所以一定要记得保留证据，比如每天加班的考勤，以及自己做的记录。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 计件工资制度下，有加班费吗？  
+**A：** 有。
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+《工资支付暂行规定》第13条：实行计件工资的劳动者，在完成计件定额任务后，由用人单位安排延长工作时间的，应根据上述规定的原则，分别按照不低于其本人法定工作时间计件单价的150％、200％、300％支付其工资。
+
+
+工资支付暂行规定 关于工资总额组成的规定#第六条 劳动法#第五章_工资 劳动合同法
+
+
+#### 计件工资和提成工资形式下，劳动者的月工资能不能低于地方最低工资标准？  
+**A：** 不行。参考《最低工资规定#第十二条》。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 第五章 劳动关系的解除
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 解除劳动合同补偿、赔偿情况对比表
+
+| **解除原因**                | **补偿金/赔偿金** | **计算标准**                         |
+| ----------------------- | ----------- | -------------------------------- |
+| **用人单位无过错性辞退（裁员）**      | 补偿金         | 每满一年支付一个月工资（不足半年按半年计算，超过半年按一年计算） |
+| **用人单位未依法提供劳动条件导致解除合同** | 补偿金         | 每满一年支付一个月工资（不足半年按半年计算，超过半年按一年计算） |
+| **劳动合同到期，用人单位不续签**      | 补偿金         | 每满一年支付一个月工资（不足半年按半年计算，超过半年按一年计算） |
+| **劳动合同到期，劳动者不续签**       | 无需支付        | 无需支付                             |
+| **企业违法解除劳动合同**          | 赔偿金         | 赔偿金 = 经济补偿金 × 2                  |
+| **应当签无固定期限劳动合同而企业不签的**  | 赔偿金         | 赔偿金 = 经济补偿金 × 2                  |
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+| **解除原因**                      | **是否需支付补偿金/赔偿金** | **计算标准**        |
+| ----------------------------- | ---------------- | --------------- |
+| **劳动者主动辞职**                   | 无需支付             | 无需支付            |
+| **劳动者因用人单位违法解除合同**            | 赔偿金              | 赔偿金 = 经济补偿金 × 2 |
+| **用人单位因劳动者严重违纪违法解除合同**        | 无需支付             | 无需支付            |
+| **用人单位因劳动者严重失职、营私舞弊造成损失解除合同** | 无需支付             | 无需支付            |
+| **劳动者被依法追究刑事责任**              | 无需支付             | 无需支付            |
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 如何应对非法辞退？  
+
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+1. 首先确认对方是否有资格代表公司，如果对方是在个人微信等渠道通知辞退的，那么应当首先确认对方确实是公司相关人员，并要求对方声明此决定是代表公司做出的。
+2. 使用EMS+电子双送达的方法，向公司表达异议。不要在任何不利于我们的文件（比如辞退通知书等）上签字。  
+   **不要签字！！！** **不要签字！！！** **不要签字！！！**
+3. 收集劳动者在此工作、公司非法辞退，以及其他方面（比如欠薪、欠加班费等等）的证据，准备走各种法律程序。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 第六章 社会保险与住房公积金
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 社保的缴纳具体是怎样进行的？  
+**A：** 理论上来说，具体的缴纳过程中劳动者是不必参与的。对于劳动者应当缴纳的部分，用人单位有义务代为从工资中扣除。
+
+|      | 单位缴纳 | 个人缴纳 |
+| ---- | ---- | ---- |
+| 医疗保险 | √    | √    |
+| 生育保险 | √    |      |
+| 养老保险 | √    | √    |
+| 工伤保险 | √    |      |
+| 失业保险 | √    | √    |
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 用人单位必须给劳动者交社保吗？  
+**A：** 是的。
+
+#### 我可不可以承诺放弃社保，让公司把钱发给我？  
+**A：** 不行。
+
+#### 公司为了节省成本，按照最低工资标准给我缴纳社保合法吗？  
+**A：** 不合法。你可以带着劳动合同、工资流水/个税记录、其他相关证据等材料去人社局社保部门、公积金管理中心举报并要求公司补缴社保。——可惜的是，出于实际的种种考虑，劳动者以未足额缴纳社保为由被迫离职是不被支持的。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 我没有和公司签订劳动合同，公司应不应该给我交社保？  
+**A：** 应该交。不过公司既然不签合同，很可能不给你交社保。但是，是否需要交社保不是以是否签订合同进行考量的，而是以劳动关系是否存在来进行考量的，所以你仍然可以主张补缴社保。具体的流程是，先仲裁证明你和公司之间存在劳动关系，然后拿着判决去人社局要求补办。
+
+#### 社保问题的诉讼时限是劳动仲裁的一年，还是民事诉讼的三年？  
+**A：** 都不是，社保属于行政行为，不受民事诉讼时限的限制。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 医疗保险
+
+内容相当繁杂，本次略
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 工伤保险
+</div></script></section><section  data-markdown><script type="text/template"></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+《工伤保险条例#第三章_工伤认定》：职工有下列情形之一的，应当认定为工伤：
+
+1. 在**工作时间**和**工作场所**内，**因工作原因**受到事故伤害的。
+2. **工作时间前后**在**工作场所内**，从事**与工作有关**的**预备性或者收尾性工作**受到事故伤害的。
+3. 在**工作时间**和**工作场所**内，**因履行工作职责受到暴力**等意外伤害的。
+4. 患职业病的。
+5. **因工外出**期间，由于**工作原因**受到伤害或者发生事故下落不明。
+6. 受到**非本人主要责任的交通事故**伤害。职工在**合理时间内** **往返于工作地** 与配偶、父母、子女居住地的**合理路线的上下班途中**发生事故的，亦可认定为工伤。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+《工伤保险条例》：职工有下列情形之一的，应当**视同为工伤**：
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+工伤保险条例#第三章_工伤认定
+1. 在工作时间和工作岗位，突发疾病死亡或者在48小时内经抢救无效死亡的。
+2. 在抢险救灾等维护国家利益、公共利益活动中受到伤害的。
+3. 职工原在军队服役，因战、因工致残，已取得伤残军人证，到用人单位后旧伤复发的。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**建筑工地上的基层务工人员**因工受伤，由**违法分包的单位**承担建筑工人的工伤保险待遇。按照《关于确立劳动关系有关事项的通知》(劳社部发〔2005〕12 号) 
+##### 四、
+建筑施工、矿山企业等用人单位将工程(业务)或经营权发包给不具备用工主体资格的组织或自然人，对该组织或自然人招用的劳动者，由具备用工主体资格的发包方承担用工主体责任。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**超龄人员**参考人力资源社会保障部关于执行《工伤保险条例》若干问题的意见（二）第二条：达到或超过法定退休年龄，但未办理退休手续或者未依法享受城镇职工基本养老保险待遇,继续**在原用人单位工作**期间受到事故伤害或患职业病的，**用人单位依法承担工伤保险责任**。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="unordered_pics/工伤保险流程示意图1.drawio.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### **工伤认定需要的材料**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+从受伤之日起1年内提交资料申请工伤认定应提交的资料（个人）
+
+1. 工伤认定申请表一式两份（自行复印）（工亡者外加第11条）  
+2. 个人申请（无模板）（用A4纸自己写明事故经过和被伤害情况、签字并按指纹）。  
+3. 当事人身份证复印件。  
+4. 委托他人办理工伤认定时，须出具授权委托书，表明具体承办人  
+5. 姓名、联系方式及授权范围及亲属关系证明（如户口本复印件等）。  （下一页续）
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+6. 初诊病历、诊断证明（需盖诊断证明专用章或医疗专用章）、检查报告、住院病案（未住院不需要），若工亡需提供死亡证明。  
+7. 二人以上的证人证言（事发第一现场证人所见所闻、签字井按指纹）以及证人的身份证明（身份证复印件）。（证人证言不能一模一样）
+8. **当事人与用人单位是否具有劳动关系证明（包括事实劳动关系）**，  
+9. 用人单位工商注册信息（在国家企业信用信息公示系统网址打印）  
+10. 女超过 50 岁、男超过 60 岁需在户籍所在地的市级养老保险基金中心开具未享受城镇职工养老保险待遇证明。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+11. 其他需要提供的材料：  
+a) 交通事故须出具交通管理部门的（交通事故责任认定书》。  
+b) 企业内发生的交通事故须出具企业车辆管理部门出具的《交通事故责任认定书》。  
+c) 在履行工作职责中被人段打致伤者,须出具公安部门出具的履行工作职责遭受暴力伤害的证明、人民法院的判决书或者其他相关证明材料。    
+12. 若工亡的案件需亲属（父母、子女、配偶）在工伤认定表及个人、申请上签字按手印并附亲属关系证明（户口本）及身份证复印件，如户口本与当事人不在一起需村委会或居委会出具亲属关系证明。  
+13. 提交材料为复印件的，须提供原件进行核对。(不包含注册信息)
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 一、 工伤保险待遇
+
+#### a) 停工留薪期
+
+《工伤保险条例》
+##### 第三十三条
+
+职工因工作遭受事故伤害或者患职业病需要暂停工作接受工伤医疗的，在停工留薪期内，原工资福利待遇不变，由所在单位按月支付。
+
+停工留薪期一般不超过12个月。伤情严重或者情况特殊，经设区的市级劳动能力鉴定委员会确认，可以适当延长，但延长不得超过12个月。工伤职工评定伤残等级后，停发原待遇，按照本章的有关规定享受伤残待遇。工伤职工在停工留薪期满后仍需治疗的，继续享受工伤医疗待遇。
+
+生活不能自理的工伤职工在停工留薪期需要护理的，由所在单位负责。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### b) 工伤赔偿
+
+在计算好工伤赔偿费用后，前往管辖地社保分局申请。并携带以下材料：
+
+1. 工伤职工身份证复印件（第二代身份证正反面A4纸复印）；
+2. 《工伤认定决定书》；
+3. 《工伤保险待遇申报表》；
+4. 《劳动能力鉴定结论书》；
+5. 《伤残待遇收款申请》。
+6. 社保经办机构根据实际情况提出的补充材料。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 认定工伤一定需要劳动关系成立吗？劳务关系行不行？   
+**A：** 即便是双方在事实上可能并不成立劳动关系的情况下，工伤认定仍然是有可能的。所以一般是具体情况具体分析。
+
+#### 我现在把申请交上去了，一般多长时间能下来工伤认定的结果？   
+**A：** 七十五天之内。参考《工伤认定办法》，一共是受理的15天和认定的60天。确定受理之后会发一个受理通知书，认定结束之后会发一个工伤认定决定书，途中会有工作人员前来调查审核。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 如果由于非法用工而导致难以认定劳动关系，怎么办？     
+**A：** 参考 **《非法用工单位伤亡人员一次性赔偿办法》。**
+
+#### 用人单位不服从工伤认定，并进行了起诉，这影响我享受工伤保险待遇吗？   
+**A：** 在行政诉讼的程序之内，不影响你享受工伤保险待遇。参考《工伤保险条例》第三十一条。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 我希望对一段时间之前受到的伤害进行工伤认定，可以吗？    
+**A：** 劳动者的工伤认定时间是从伤害的这个事实发生之日起一年之内。不过请注意，对于以下几种原因导致耽误时间的，不计入这一年：
+
+一， 不可抗力  
+二， 人身自由受到限制  
+三， 属于用人单位原因  
+四， 行政部门登记制度不完善  
+五， 当事人对于是否存在劳动关系申请了仲裁或者提起诉讼。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 我因为原因耽搁了时间导致已经超过了一年，可以继续进行工伤认定吗？  
+**A：** 由于一些**特殊原因**耽误的时间不计入这一年，参考上一条。
+
+#### 可是我耽误的时间就是超过了一年了，没有办法进行工伤认定了，该怎么办？  
+**A：** 只能走**民事诉讼**，提起侵权损害赔偿。不过这也有不超过**三年**的时间限制。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 为什么我仍然需要支付医疗费用？  
+**A：** 按理来说是从从工伤保险基金中支出的，或者先由用人单位垫付。如果你发现这两者都没有发生，就去向人力资源与社会保障局反映。反应完成之后一般不会马上处理，所以你需要自己垫付，然后拿着发票单据去人社局报销就行了。
+
+#### 这部分医疗费用的补贴可以用于非工伤引起的疾病治疗吗？  
+**A：** 不行。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 什么是康复费用？   
+**A：** 比如腿断了肯定需要一个恢复期，恢复期肯定需要一些另外的支出，这就是康复费用。根据受到的伤害不同，康复费用的支出是大不一样的。按照《工伤保险条例》第三十条，“工伤职工到签订服务协议的医疗机构进行工伤康复的费用，符合规定的，从工伤保险基金支付。”，这个“符合规定”的认定也是由人社局进行。
+
+#### 什么是住院伙食补助费？如何补助？   
+**A：** 顾名思义，考虑到你受伤期间的饮食花费也计入保险，会按照**本单位的因公出差伙食补助标准的70%**给你发放补助费。
+
+#### 什么是到统筹地区以外就医的交通食宿费？   
+**A：** 比如你受到的伤害很大，必须去大城市的医院进行治疗，那么其中所需的交通和食宿费会**按照本单位职工因公出差的标准**发放补助费。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 什么是安装配置伤残辅助器具的费用？   
+**A：** 比如腿断了之后需要的轮椅或者扶手之类东西的购买费用。不过这有两个条件：第一是“必要的”，你不能说你胳膊断了却非说自己需要轮椅，第二是“在合理限度之内的”，你不能因为有这个机会就试图买到地球上最好的设备，一般来说只会允许你挑一个够用的就行。
+
+#### 我可以用那个伤残辅助器具的费用买一个进口的器具吗？   
+**A：** 一般不能，参考上一条。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 什么是生活护理费？    
+**A：** 比如伤残让你的生活不能自理，就需要进行生活护理，这就是生活护理费的来源。不过这个是**需要经过劳动能力鉴定委员会确认**的。
+
+#### 那么这个生活护理费有多少？   
+**A：** 劳动能力鉴定委员会按“生活完全不能自理、生活大部分不能自理或者生活部分不能自理”3个不同等级进行鉴定，并分别按照统筹地区上年度职工月平均工资的50%、40%或者30%进行支付。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 如果我是自己在工作途中因为操作失误不小心受伤了，可以进行工伤认定吗？   
+**A：** 可以的。
+
+#### 我的用人单位给我缴纳过了工伤保险费，我自己又购买了人身意外险，这两个保险是只能用一个吗？   
+**A：** 两个保险同时可以发生发生作用的。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 劳动能力鉴定需要花钱吗？  
+**A：** 需要，在受理窗口提交材料并确认后会收取300元鉴定费用，随后的医院检查又会收取3-5百元检查费。
+
+#### 劳动能力鉴定如此昂贵，我可以不做吗？  
+**A：** 《社会保险法#第四十三条》：工伤职工有下列情形之一的，停止享受工伤保险待遇：  ……（二）拒不接受劳动能力鉴定的。……
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 我因工伤停工期间，我仍然有工资吗？  
+**A：** 是的，根据《工伤保险条例》的第33条“职工因工作遭受事故伤害或者患职业病需要暂停工作接受工伤医疗的，在**停工留薪期内**，原工资**福利待遇不变**，由所在单位按月支付。” 
+
+#### 这个照常领工资的停工留薪期有多长？  
+**A：** 一般不超过**12个月**，伤情严重的经过市级劳动能力鉴定委员会确认最多**再延长12个月**。
+
+#### 停工留薪期结束之后我是不是就领不到钱了？  
+**A：** 也不尽然，如果停工留薪期结束之后**治疗仍然没有结束**，你也能享受工伤医疗待遇。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 生活护理费会给我发多久？    
+**A：** 没有法律明确规定生活护理费发放的时间，原则上只要生活护理费希望改善的，劳动者身体状况没有改善，就应当继续发放，可是这是很难认定的。
+
+#### 生活护理费和停工留薪期的护理费有什么区别？是一个东西吗？   
+**A：** 不是一个东西。前者从工伤保险基金支付，后者由用人单位支付。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 如果我因工致残了，有没有另外的待遇？   
+**A：** 你有**一次性伤残补助金**和1~4级伤残的按月领取的**伤残津贴**。
+
+#### 一次性伤残补助金有多少？   
+**A：** 按照伤残等级的不同，按照**劳动者受伤前12个月的平均工资**进行计算。具体方法参考《工伤保险条例》第三十五，三十六，三十七条。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 我们公司规定了很少的基本工资，实际发放的工资主要是各种奖金和津贴，那么是不是我就只能拿很少的补助金？   
+**A：** 不是，所谓的劳动者受伤前12个月的平均工资是按照**实际工资**计算的。
+
+#### 我一年的工资很少或者很多，也是按照本人工资计算一次性伤残补助金吗？   
+**A：** 不是，存在一个**上限和下限**。上限是上年度统筹地区职工月平均工资的三倍，下限是上年度统筹地区职工月平均工资的60%。超出上限或者低于下限的，分别按照上限或者下限计算。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 伤残津贴是什么？   
+**A：** 在劳动关系存续期间给你**按月发放的津贴**。但是请注意，不是所有等级的伤残都有这个津贴。计算方法仍然和伤残等级以及本人工资有关。参考《工伤保险条例》第三十五，三十六，三十七条。注意存在和一次性伤残补助金类似的上限下限。
+
+#### 在我因伤致残后，我和用人单位的劳动关系仍然存在吗？如果存在，我还需要工作吗？    
+**A：** 一级至四级伤残的，保留劳动关系，退出工作岗位。五级、六级伤残的，保留劳动关系，由用人单位安排适当工作。难以安排工作的，由用人单位按月发给伤残津贴。
+
+#### 我伤残直至退休之后，津贴还发吗？    
+**A：** 退休后就没了，但是有养老保险。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 因伤致残后，我的养老保险如果低于伤残津贴，怎么办？   
+**A：** 按照国家有关规定，如果基本养老保险低于伤残津贴的，由工伤保险基金补足差额。
+
+#### 因伤致残后，我的医疗保险是按照什么进行缴纳的？仍然是我的工资吗？   
+**A：** 是以这个伤残津贴作为基数进行缴纳的，不是原来的工资。
+
+#### 因伤致残后，用人单位可以解除和我的劳动关系吗？    
+**A：** **它没有权利这么做**。不过如果你是5~10级伤残，那你可以本人提出解除劳动关系。如果你是7~10级伤残，那么可以在劳动合同期满后不再续期。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 因工死亡后，家属可以获得什么东西？    
+**A：** **丧葬补助金**、**供养亲属抚恤金**和**一次性工亡补助金**。
+
+#### 工亡认定要怎么搞？    
+**A：** 和工伤认定流程基本一致。
+
+#### 丧葬补助金有多少？    
+**A：** 丧葬补助金为**6个月的统筹地区上年度职工月平均工资**。
+
+#### 供养亲属抚恤金有多少？它是什么人都能给发吗？    
+**A：** 这是发给由因工死亡职工**生前提供主要生活来源、无劳动能力的亲属**的。具体的计算方式是，配偶每月40%，其他亲属每人每月30%，孤寡老人或者孤儿每人每月在上述标准的基础上增加10%。核定的**各供养亲属的抚恤金之和不应高于因工死亡职工生前的工资。** 参考《工伤保险条例》第三十九条。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 一次性工亡补助金有多少？   
+**A：** 上一年度**全国城镇居民人均可支配收入的20倍**。
+
+#### 我是大学生，不能直接参加劳动得到报酬，我有这个供养亲属抚恤金吗？    
+**A：** 可能有，要看人社局的具体认定。
+
+#### 遭遇工伤，但是未达伤残等级，有赔偿吗？    
+**A：** 有，用人单位应当对此承担治疗和休养费用。如果用人单位以未达伤残等级为由拒绝支付相关待遇，请保留好工伤部门和医疗机构提供的各项材料和发票作为证据，并申请劳动仲裁。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 失业保险
+
+暂略
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 养老保险
+
+#### 养老保险如何缴纳？  
+**A：** 个人缴纳部分是缴纳基数（个人工资）的8%，同样也由企业代为从工资中扣除。不过请注意，前面说过的灵活就业人员需要自行缴纳20%，缴纳基数从当地全省上年度在岗职工的平均工资的百分之六十到百分之三百中选择。
+
+#### 缴纳多久养老保险可以享受养老保险待遇？  
+**A：** 15年
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 养老保险待遇的领取地如何确认？  
+**A：** 
+
+1. 基本养老保险关系在户籍所在地的，由户籍所在地负责办理待遇领取手续，享受基本养老保险待遇
+2. 基本养老保险关系不在户籍所在地，而在其基本养老保险关系所在地累计缴费年限满10 年的，在该地办理待遇领取手续，享受当地基本养老保险待遇
+3. 基本养老保险关系不在户籍所在地，且在其基本养老保险关系所在地累计缴费年限不满10 年的，将其基本养老保险关系转回上一个缴费年限满10年的原参保地办理待遇领取手续，享受基本养老保险待遇 
+4. 基本养老保险关系不在户籍所在地，且在每个参保地的累计缴费年限均不满10年的，将其基本养老保险关系及相应资金归集到户籍所在地，由户籍所在地按规定办理待遇领取手续，享受基本养老保险待遇。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 养老金金额如何计算？  
+**A：** 养老金构成以基础养老金和个人账户养老金为主，分别对应交费的统筹账户和个人账户。每月领取的**养老金=基础养老金+个人账户养老金**。
+
+**基础养老金=〔上年度当地职工平均工资＋个人指数化平均工资〕÷2×缴费年限×1%。**
+
+**个人账户养老金=退休时个人账户储存额÷计发月数****。**
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 养老保险断缴有什么后果？  
+**A：** 影响不大，因为其年限同样是累计计算的。
+
+#### 养老保险可以补缴吗？  
+**A：** 一般来说不行，不过在因用人单位原因导致应缴未缴的，劳动者可以通过行政执法部门要求用人单位补缴。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 生育保险
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 住房公积金
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 住房公积金如何缴纳？  
+**A：** 个人公积金缴存的月缴存额=职工本人上一年度月平均工资x职工的公积金缴存比例。并且，每年的7月1日至次年的6月30日为一个公积金缴存年度。
+
+#### 单位不缴公积金是否属于劳动争议？可否进行劳动仲裁？  
+**A：** 倘若劳动合同里没有约定住房公积金的话就不算，得去住房公积金管理中心进行举报。    
+如果劳动合同中约定了住房公积金，那么单位不缴纳就是违法了劳动合同约定，属于劳动争议，可以进行劳动仲裁。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 有没有可以提取住房公积金的情况？  需要准备什么材料？  
+**A：** 除用于购/租房、建造、装修，以下情形劳动者可销户提取公积金
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+| 情况                                       | 需要准备的材料                                                                                  |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------- |
+| 退休                                       | 退休证，退休职工应提供区县劳动部门颁发的退休证                                                                  |
+| 农业户籍职工男满60周岁，女满55周岁的。                    | 职工户口簿                                                                                    |
+| 完全丧失劳动能力、大部分丧失劳动能力或重度残疾并与单位解除或终止劳动关系的。   | 残疾人证、与单位解除或终止劳动关系证明                                                                      |
+| 领取失业保险金的。                                | 失业证、领取保险金证明，凭银行存折领取的提供银行存折                                                               |
+| 到所在市行政区域外工作并在当地建立和缴存住房公积金的，可销户提取全部公积金余额。 | 户口迁移证明，户口迁出本市并与所在单位解除或终止劳动关系 的，应提供公安机关出具的户口迁移证明和职工与单位解除或终止劳动关系证明、异地 住房公积金管理中心出具的开户或缴存证明。 |
+|                                          | 凭储蓄卡领取的提供储蓄卡及对账单                                                                         |
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 什么是公积金转移？如何进行公积金转移？  
+
+**A：** 当工作单位变更的时候，需要进行公积金转移，及时转移公积金能够保持公积金缴纳的连续性，以便购房贷款时提取。公积金转移可以通过“全国住房公积金”小程序中点击“城市服务“，进行线上办理。或者，可以线下去当地住房公积金管理中心所属任意管理部或受托银行代办点办理。职工本人持身份证原件或单位经办人持经办人身份证原件，填写完整并有职工签字的《公积金缴存人账户转移申请表》。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 什么是公积金封存？  
+如果职工因为离职而导致公积金缴存中断，又暂时没有找到新的工作进行转移，也不符合销户提取公积金的条件，那么可以办理公积金封存。离职时，单位经办人（一般为HR）会给你办理公积金账户封存手续，**封存时间满6个月就可以提取公积金**，封存期间不能办理账户合并，公积金账户启封后可以办理异地转移接续。
+
+#### 封存满6个月如何进行提取？  
+**A：** 到住房公积金管理中心领取住房公积金提取审批表，准备好所需材料（在领取申请表的时候问好），向住房公积金管理中心的工作人员提出申请，然后走完流程之后提取金额会打到你提供的银行卡账户上。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 封存之后我又找到了新工作，怎么办？  
+**A：** 个人住房公积金账户转移至新单位，新单位应及时办理启封手续，并按规定为职工缴存住房公积金。
+
+#### 公积金断缴有什么影响？  
+**A：** 如果你不是最近要买房的话，就没有太大影响。请注意：如果你离职后重新就业，且办理了住房公积金帐户转移，期间断缴不超过3个月的，可视为连续正常缴存。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 其他劳动争议问题
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 劳务派遣、承揽、外包
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### 劳务派遣
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 什么是劳务派遣？  
+**A：** 劳动者和劳务派遣单位建立劳动关系，随后被派遣到用工单位上班，在用工单位的管理和监督下工作的用工形式。
+
+#### 劳务派遣中，劳动者和那一方构成劳动关系？  
+**A：** 劳务派遣单位（用人单位）。
+
+#### 什么是劳务派遣协议？  
+**A：** 是**用人单位与用工单位**就劳务派遣事宜签订的合同。其应当包括的内容详见《劳务派遣暂行规定》第七条。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 劳务派遣的形式适用于哪些性质的工作？  
+
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+《劳务派遣暂行规定》第三条：“用工单位只能在**临时性、辅助性或者替代性**的工作岗位上使用被派遣劳动者。”
+
+- **临时性**工作岗位是指存续时间不超过六个月的岗位。
+- **辅助性**工作岗位是指为主营业务岗位提供服务的非主营业务岗位。不过，实际操作中用工单位在看到劳务派遣优势后常常在同一岗位上进行了混同用工。
+- **替代性**工作岗位是指用工单位的劳动者因脱产学习、休假等原因无法工作的一定期间内，可以由其他劳动者替代工作的岗位。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 合法的派遣单位需要满足什么条件？  
+**A：**    
+《劳动合同法》
+##### 第五十七条
+
+经营劳务派遣业务应当具备下列条件:
+
+（一）注册资本不得少于人民币二百万元；  
+（二）有与开展业务相适应的固定的经营场所和设施；  
+（三）有符合法律、行政法规规定的劳务派遣管理制度；  
+（四）法律、行政法规规定的其他条件。
+
+经营劳务派遣业务，应当向劳动行政部门依法申请行政许可；经许可的，依法办理相应的公司登记。未经许可，任何单位和个人不得经营劳务派遣业务。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 所以我在写《仲裁申请书》的时候，被申请人是应当写用人单位吗？  
+**A：** 把用工单位和用人单位都作为被申请人。在主张里，同样写“请求裁决申请人和被申请人A（派遣单位）和被申请人B（用工单位）存在劳动关系”，交给仲裁委判断。总而言之，虽然法律规定对用工单位和派遣单位的责任进行了划分，但是我们提出诉求时不需要进行区分。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 什么情况下我是和用工单位而非用人单位建立劳动关系？  
+**A：**     
+1. 用人单位没有资质进行劳务派遣。   
+2. 用人单位自己设立劳务派遣单位，由劳务派遣单位把劳动者派遣给本用人单位或者子公司。
+
+#### 劳务派遣中，发放工资、缴纳社保、工伤之类的事情，责任归用人单位还是用工单位？  
+**A：** 一般情况下是劳务派遣单位（用人单位）。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 什么情况下社保由用工单位缴纳？  
+**A：** 如果劳务派遣单位把劳动者派遣到外地，而又在外地不设立分支机构的，就由用工单位代为缴纳社保。——如果出了问题，拿着劳动合同去社保中心或者税务局投诉就可。
+
+#### 劳动派遣的工资规定是怎样的？被派遣劳动者无工作期间有没有工资？  
+**A：** 《劳动合同法》第五十八条：**劳务派遣单位**应当与被派遣劳动者订立**二年以上的固定期限劳动合同**，**按月支付劳动报酬**；被派遣劳动者在**无工作期间**，劳务派遣单位应当按照**所在地人民政府规定的最低工资标准**，向其按月支付报酬。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 跨地区派遣，是按照哪一个地区的标准执行？  
+**A：** 《劳动合同法#第六十一条》：劳务派遣单位跨地区派遣劳动者的，被派遣劳动者享有的劳动报酬和劳动条件，按照**用工单位所在地**的标准执行。   
+并且根据《劳动合同法实施条例#第十四条》：“**用人单位注册地的有关标准高**于劳动合同履行地的有关标准，**且用人单位与劳动者约定**按照用人单位注册地的有关规定执行的，从其约定。“
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 劳务派遣单位和用工单位可以向劳动者收费吗？  
+**A：** 不行。
+
+#### 劳务派遣单位和用工单位可以克扣劳务派遣协议里约定的劳动报酬吗？  
+**A：** 不行。
+
+#### 派遣工在用工单位工作，相同岗位上的待遇是不是比合同工低一点？   
+**A：** 理论上应当同工同酬。但是由于举证较难，去劳动仲裁得到支持的概率不大。但如果有事先的书面约定的工资数额，就可以得到支持。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 同工同酬就是同岗同薪吗？  
+**A：** 不是，因为即使岗位相同，劳动者自身的条件不同，劳动产出不同，待遇也不相同。
+
+#### 为什么用人单位要以承揽、外包等名义来掩盖劳务派遣的事实？  
+**A：** 因为劳务派遣中劳动者和用人单位仍然是劳动雇佣的不平等关系，法律倾向于保护劳动者；而承揽、外包是发生在平等的民事主体之间的民事法律行为。——用人单位希望把不平等的劳动关系伪装成平等的民事关系，来规避用工单位的责任、减少用人成本。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### 承揽
+</div></script></section><section  data-markdown><script type="text/template"></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+承揽，是当事人一方为他方完成一定的工作，他方在验收后支付约定的报酬的民事法律行为。其中当事人一方为承揽人，他方为定作人，双方基于承揽合同。承揽包括三类：
+
+1. **共同承揽**。例如某公司把刷墙、铺地板工作交给甲乙二人完成，具体分工在二人内部决定，就是共同承揽。   
+2. **分别承揽**。还是上面的例子，公司分别与甲、乙签订合同，甲刷墙，乙铺地板，就是分别承揽。   
+3. 承揽人将工作**交予第三人**。还是上面的例子。公司与甲签订合同刷墙，甲又与乙签订合同，让乙刷墙，就是承揽人将工作交予第三人。
+
+总而言之，劳动关系是劳务给付，承揽关系是交付劳动成果；劳动关系具有从属性，承揽关系是独立自主平等的；劳动关系是继续性契约，承揽关系是一次性给付，这就是承揽关系和劳动雇佣的区别。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### 外包
+</div></script></section><section  data-markdown><script type="text/template">
+</script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+外包是企业（发包方）将部分业务或职能交给外部公司（承包方）完成。与劳务派遣不同，业务外包中承包方的员工和承包公司建立劳动关系，受到承包公司的管理和约束，不受外包公司的管理和约束。     
+
+同时，“劳务外包“是发包单位将业务发包给承包单位，由承包单位自行安排人员按照发包单位要求完成相应的业务或工作内容的用工形式。与劳务派遣相比，承包方的员工和承包公司建立劳动关系，受到承包公司的管理和约束，不受外包公司的管理和约束。    
+
+ 劳务外包和业务外包相比，前者外包对象是具体的劳动力或岗位，后者外包对象是整个业务流程。前者的合同侧重于劳动力的提供和使用，后者则是业务成果的交付。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### 假外包/假承揽
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 如何判断什么是“假外包/假承揽，真派遣/真事实用工”？  
+
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+企业作为发包方，将其业务发包给其他单位，但承包单位的劳动者**接受发包单位的指挥管理**、按照企业的安排提供劳动，或者以企业的名义提供劳动等，会被认定为劳务派遣、而非劳务外包。    
+ 企业作为定作方，但承揽单位的劳动者**接受定作单位的指挥管理**、按照定作方安排提供劳动，或者以定作方的名义提供劳动等，会被认定为劳务派遣、而非劳务承揽。    
+ 如果承包单位或者承揽企业在上述情况下没有合法资质，就会认定为事实用工。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 劳动者遇到假外包/假承揽，怎么办？  
+
+**A：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+外包 承揽
+首先注意收集证据，围绕可以证明“**被实际用工单位管理和安排劳动**”的证据来进行收集，比如用工单位领导管理安排劳动者工作的录音影像记录等。此外，**实际用工单位发放劳动报酬或者委托承包公司发放劳动报酬**的证据也有作用。    
+在劳动仲裁时，劳动者除了将用人单位列为被申请人，还需要将实际用工单位列为第二被申请人，并且可以在仲裁申请书上请求裁决两个被申请人对违法行为承担连带责任。
+
+#### 劳务派遣中的辞退和退回是什么？  
+**A：** 辞退是指用人单位主动和劳动者解除劳动关系。这里仍然适用一般步骤。    
+退回是指用工单位把劳动者退回用人单位。根据《劳务派遣暂行规定》第十二条，被派遣劳动者退回后在无工作期间，劳务派遣单位应当按照不低于所在地人民政府规定的最低工资标准，向其按月支付报酬。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+符合下列情况的，用工单位可以把劳动者合法退回用人单位，而用人单位可以依此为由**合法辞退**且无需支付任何补偿：
+1. 试用期前告知录用条件或者考核标准的情况下，在试用期间被证明不符合录用条件的。
+2. 在公司经过民主讨论制定出来的规章制度且告知劳动者的情况下，严重违反用人单位的规章制度的
+3. 严重失职，营私舞弊，给用工单位造成重大损害的。
+4. 被派遣劳动者同时与其他用人单位建立劳动关系，对完成本单位的工作任务造成严重影响，或者经用人单位或者用工单位提出，拒不改正的。
+5. 以欺诈、胁迫的手段或者乘人之危，使对方在违背真实意思的情况下订立或者变更劳动合同的情形致使劳动合同无效的。
+6. 被依法追究刑事责任的。
+</div></script></section><section  data-markdown><script type="text/template"></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+符合下列情形的，用工单位可以把劳动者合法退回给用人单位，由用人单位**另外安排工作**：
+1. 劳动者与用人单位签订的劳动合同时所依据的客观情况发生重大变化，致使劳动合同无法履行，经用工单位与用人单位和劳动者协商，未能就变更劳动合同内容达成协议的。
+2. 用工单位发生经济性裁员。
+3. 用工单位被依法宣告破产、吊销营业执照、责令关闭、撤销、决定提前解散或者经营期限届满不再继续经营的。
+4. 用工单位与用人单位签订的劳务派遣协议期满终止的。
+5. 劳动者患病或者非因工负伤，在规定的医疗期满后不能从事原用工单位工作而被退回的。
+6. 劳动者经过用工公司合法合规制定规章制度和考核证明不能胜任原工作的。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+用工单位**不能退回**的情况
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+1. 从事接触职业病危害作业的劳动者未进行离岗前职业健康检查，或者疑似职业病病人在诊断或者医学观察期间的。  
+2. 在本单位患职业病或者因工负伤并被确认丧失或者部分丧失劳动能力的。  
+3. 患病或者非因工负伤，在规定的医疗期内的。  
+4. 女职工在孕期、产期、哺乳期的。  
+5. 在本单位连续工作满十五年，且距法定退休年龄不足五年的。  
+6. 法律、行政法规规定的其他情形。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 被用工单位违法退回，怎么办？  
+**A：** 拨打12333向当地劳动监察大队反映情况，由劳动监察大队责令用工单位违法行为进行改正。——通常会碰到劳动监察大队无能为力的情况，这时也没有好的办法，只能按照法律规定在被退回且没工作期间按月领取用人单位发放的当地最低工资标准工资。
+
+#### 用人单位重新安排我的工作，把我调到了新用工单位的待遇更低的岗位，我应该怎么办？  
+**A：** 你可以拒绝在新用工单位工作，并且这种情况下用人单位不能随意辞退劳动者。如果用人单位以你“不服从安排”为理由辞退你，就是违法辞退。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 被违法退回后是否可以去申请劳动仲裁主张恢复和用工单位的用工关系呢？    
+**A：** 相当困难，除非你是作为孕妇、患病处在医疗期或者因工负伤的劳动者而被退回的，不过这样的成功概率也不大。
+
+#### 被派遣劳动者如何解除劳动合同？  
+**A：** 就是把正常的解除劳动合同流程里的用人单位换成与劳动者签订劳动合同的劳务派遣单位即可。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 建筑领域农民工劳动法律问题
+
+
+《保障农民工工资支付条例》中规定了一些关于农民工的特殊保护
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### **工资清偿制度：**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- 用人单位拖欠农民工工资，依法予以清偿；
+- 用人单位应当清偿而不清偿的，由出资人依法清偿；
+- 用人单位在合并、拆分之前应当清偿拖欠的工资；倘若之前协商一致，可以由合并、拆分之后的公司清偿。
+- 用人单位解散、被责令关闭的，应当在申请注销登记前依法清偿工资。
+- 用工单位使用不具备合法资质的单位派遣的农民工，导致拖欠工资的，由用工单位清偿，并可依法追偿
+- 用人单位允许个人、不具备合法经营资格或者未取得相应资质的单位以用人单位的名义对外经营，导致拖欠所招用农民工工资的，由用人单位清偿，并可以依法进行追偿。
+- 用人单位将工作任务发包给个人或者不具备合法经营资格的单位，导致拖欠所招用农民工工资的，依照有关法律规定执行。
+- 建设单位或者施工总承包单位将建设工程发包或者**分包给个人或者不具备合法经营资格的单位，导致拖欠农民工工资的，由建设单位或者施工总承包单位清偿**。施工单位允许其他单位和个人以施工单位的名义对外承揽建设工程，导致拖欠农民工工资的，由施工单位清偿。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### **专用账户制度**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- 施工总承包单位应当按照有关规定开设农民工工资专用账户，专项用于支付该工程建设项目农民工工资。
+- 建设单位应按照合同约定及时拨付工程款，并将人工费用及时足额拨付至农民工工资专用账户，专项用于支付农民工工资。人工费用拨付周期不得超过一个月。
+- 工程完工且未拖欠农民工工资的，施工总承包单位公示30日后，可以申请注销农民工工资专用账户，账户内余额归施工总承包单位所有。
+- 因建设单位未按照合同约定及时拨付工程款导致农民工工资拖欠的，建设单位应当**以未结清的工程款为限先行垫付工资**。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### **总包代发工资制度**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#农民工
+工程建设领域推行分包单位农民工工资委托施工总承包单位代发制度。**分包单位**应当按月考核农民工工作量并**编制工资支付表**，经农民工本人签字确认后，与当月工程进度等情况一并交施工总承包单位。**施工总承包单位根据分包单位编制的工资支付表**，通过农民工工资专用账户**直接将工资支付到农民工本人的银行账户**，并向分包单位提供**代发工资凭证**。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### **维权信息公示与投诉处理**
+</div></script></section><section  data-markdown><script type="text/template">dg-publish: true</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#农民工 
+
+施工总承包单位应当在施工现场醒目位置设立维权信息告示牌，明示下列事项：
+
+1. 建设单位、施工总承包单位及所在项目部、分包单位、相关行业工程建设主管部门、劳资专管员等基本信息；
+2. 当地最低工资标准、工资支付日期等基本信息；
+3. 相关行业工程建设主管部门和劳动保障监察投诉举报电话、劳动争议调解仲裁申请渠道、法律援助申请渠道、公共法律服务热线等信息。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 我在工地干活，我能不能签订劳动合同？  
+**A：** 《保障农民工工资支付条例#第二十八条》：施工总承包单位或者分包单位应当**依法与所招用的农民工订立劳动合同**并进行**用工实名登记**。
+
+#### 分包单位常常继续分包给包工头，这样合法吗？  
+**A：** 不合法。包工头是个人，个人是不具有用工资质的。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 包工头欠了我的工资跑了，我应该找谁告谁？  
+**A：** 你应该找包工头上一级的分包单位，直到找到一个具有合法用工资质的单位为止，然后把该单位列为被申请人。——当然，你可能要问“那么我怎么知道他上一级具有合法资质的单位是啥？”实际操作中，我们建议你找到你们工地的**施工告示牌**，拍一张照片，里面应该有“施工单位”“建设单位“”监理单位“，它们一般是具有合法资质的，你就把它们都列为被申请人。虽然它们可能辩称分包给了其他公司，它们也有义务联系到下级单位或个人。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 我被拖欠工资了，我应当保留那些证据？  
+**A：** 劳动合同、劳务合同、施工告示牌、工资表或明细、银行卡工资流水、工作证、考勤表、工作制服、工作群聊天记录等等。
+
+#### 用工单位倒闭了还需要支付拖欠工资吗？  
+**A：** 需要。用人单位被依法吊销营业执照或者登记证书、被责令关闭、被撤销或者依法解散的，应当在申请注销登记前依法清偿拖欠的农民工工资。未依据前款规定清偿农民工工资的用人单位主要出资人，应当在注册新用人单位前清偿拖欠的农民工工资。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 是否可以要求用工单位出具工资明细？    
+**A：** 可以，参考《保障农民工工资支付条例#第十五条》。
+
+#### 包工头/不具有合法资质的单位招来我干活，我在干活途中受伤，谁应当承担我的工伤保险责任？  
+**A：** **用工单位**。参考《最高人民法院关于审理工伤保险行政案件若干问题的规定》第三条第四款：**用工单位**违反法律、法规规定**将承包业务转包给不具备用工主体资格的组织或者自然人**，该组织或者自然人聘用的职工从事承包业务时因工伤亡的，**用工单位为承担工伤保险责任的单位**。在仲裁认定劳动关系失败之后，这个认定不存在劳动关系的证明是你的情况适用上述规定的重要证据。然后，你只需要按照上面说的流程找到具有合法资质且违法分包的用人单位就可以让它承担你的工伤保险责任了。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### 工地层层分包的结构一般是怎样的？  
+**A：** **业主**（房地产开发商，政府等等）承包给**施工单位**（中建X局），**施工单位**分包给**建筑公司**，**建筑公司**分包给**劳务公司**，**劳务公司**分包给**包工头**。——当然，最后一步是违法的。
+
+#### 我不是在工地干活、受到用工单位管理支配的建筑工人，而是以个人身份进行加工承揽的。在加工承揽过程中造成了他人损害，责任全部都由我承担吗？   
+**A：** 如果定作人有过错（对定作、指示或者选任有过错的），也须担责。参考《民法典》第1193条。
+
+#### 农民工提供个人劳务过程中造成他人损害怎么办？    
+**A：** **由接受劳务一方承担责任**。参考《民法典#第一千一百九十二条》。
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 调岗降薪
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="unordered_pics/调岗降薪.drawio 1.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## 停工停产期、待岗期
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/chalkboard/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+	<script src="plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
+	<script src="plugin/search/search.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+	      RevealPointer,
+		  RevealChalkboard, 
+		  ElapsedTimeBar,
+        //   RevealSearch
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+				{ icon: '<i class="fa fa-pen-square"></i>',
+				title: 'Toggle chalkboard (B)',
+				action: 'RevealChalkboard.toggleChalkboard();'
+				},
+				{ icon: '<i class="fa fa-pen"></i>',
+				title: 'Toggle notes canvas (C)',
+				action: 'RevealChalkboard.toggleNotesCanvas();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":960,"height":700,"margin":0.04,"controls":true,"progress":true,"slideNumber":true,"transition":"slide","transitionSpeed":"normal"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
