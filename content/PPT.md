@@ -1,5 +1,5 @@
 ---
-dg-publish: true
+
 title: 劳动法律简明教程（幻灯片）
 ---
 
