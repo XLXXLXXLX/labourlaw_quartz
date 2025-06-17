@@ -1,9 +1,11 @@
 ---
 dg-publish: true
+title: 劳动法律简明教程（幻灯片）
 ---
 
 # 第〇章 前言
 
+这是一个中华人民共和国大陆地区劳动法律体系的简单教程，可以通过[obsidian](https://obsidian.md/)自带的[reveal.js](https://revealjs.com/)展示为幻灯片。
 
 ---
 
