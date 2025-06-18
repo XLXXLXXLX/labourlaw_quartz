@@ -28,42 +28,80 @@
     // 创建幻灯片窗口
     const win = window.open('', '_blank');
     if (!win) return;
-    win.document.write(`
-      <!DOCTYPE html>
-      <html>
-      <head>
-        <meta charset="utf-8">
-        <title>幻灯片</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
-      </head>
-      <body>
-        <div class="reveal">
-          <div class="slides">
-            ${sections}
-          </div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
-        <script>
-          Reveal.initialize();
-        </script>
-      </body>
-      <style>
-      // .slide-reveal-btn {
-//     position: fixed;
-//     top: 20px;
-//     right: 20px;
-//     z-index: 9999;
-//     padding: 10px 20px;
-//     font-size: 16px;
-//     background-color: #007bff;
-//     color: #fff;
-//     border: none;
-//     border-radius: 5px;
-//     cursor: pointer;
-// }
-
+    const revealScript = `
+    Reveal.initialize({
+        controls: true,
+        controlsTutorial: true,
+        controlsLayout: 'bottom-right',
+        controlsBackArrows: 'faded',
+        progress: true,
+        slideNumber: false,
+        showSlideNumber: 'all',
+        hashOneBasedIndex: false,
+        hash: false,
+        respondToHashChanges: true,
+        jumpToSlide: true,
+        history: true,
+        keyboard: true,
+        keyboardCondition: null,
+        disableLayout: false,
+        overview: true,
+        center: true,
+        touch: true,
+        loop: false,
+        rtl: false,
+        navigationMode: 'default',
+        shuffle: false,
+        fragments: true,
+        fragmentInURL: true,
+        embedded: false,
+        help: true,
+        pause: true,
+        showNotes: false,
+        autoPlayMedia: null,
+        preloadIframes: null,
+        autoAnimate: true,
+        autoAnimateMatcher: null,
+        autoAnimateEasing: 'ease',
+        autoAnimateDuration: 1.0,
+        autoAnimateUnmatched: true,
+        autoAnimateStyles: [
+            'opacity',
+            'color',
+            'background-color',
+            'padding',
+            'font-size',
+            'line-height',
+            'letter-spacing',
+            'border-width',
+            'border-color',
+            'border-radius',
+            'outline',
+            'outline-offset',
+        ],
+        autoSlide: 0,
+        autoSlideStoppable: true,
+        autoSlideMethod: null,
+        defaultTiming: null,
+        mouseWheel: false,
+        previewLinks: false,
+        postMessage: true,
+        postMessageEvents: false,
+        focusBodyOnPageVisibilityChange: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transitionSpeed: 'default', // default/fast/slow
+        backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+        pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+        pdfSeparateFragments: true,
+        pdfPageHeightOffset: -1,
+        viewDistance: 3,
+        mobileViewDistance: 2,
+        display: 'block',
+        hideInactiveCursor: true,
+        hideCursorTime: 5000,
+    });
+`
+    const revealStyle = `
 .reveal .has-dark-background,
 .reveal .has-dark-background h1,
 .reveal .has-dark-background h2,
@@ -284,7 +322,7 @@
   width: 95%;
   margin: var(--r-block-margin) auto;
   padding: 5px;
-  font-style: italic;
+  font-style: normal;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
@@ -420,6 +458,30 @@ canvas[data-chart] {
 .reveal .hljs {
   min-height: 50%;
 }
+`
+    win.document.write(`
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <title>幻灯片</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+      </head>
+      <body>
+        <div class="reveal">
+          <div class="slides">
+            ${sections}
+          </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+        <script>
+          ${revealScript}
+        </script>
+      </body>
+      <style>
+          ${revealStyle}
       </style>
       </html>
     `);
