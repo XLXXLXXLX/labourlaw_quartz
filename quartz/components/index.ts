@@ -24,6 +24,10 @@ import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 
+// xlx specific imports start
+import SlideReveal from "./SlideReveal"
+// xlx specific imports end
+
 export {
   ArticleTitle,
   Content,
@@ -50,4 +54,5 @@ export {
   Comments,
   Flex,
   ConditionalRender,
+  SlideReveal,
 }
